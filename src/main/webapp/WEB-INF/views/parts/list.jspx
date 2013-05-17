@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" xmlns:table="urn:jsptagdir:/WEB-INF/tags/form/fields" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:list id="pl_be_wijverbouwen_model_Part" items="${parts}" z="mbxH43eaL1Mp6gOK5cssamZ0T/I=">
+        <table:table data="${parts}" id="l_be_wijverbouwen_model_Part" path="/parts" z="uaTofdkVCfFHU6SPX9gbkgJD68A=">
+            <table:column id="c_be_wijverbouwen_model_Part_partName" property="partName" z="Degp/uHUfDyHhQDWzsxUVisfgow="/>
+            <table:column id="c_be_wijverbouwen_model_Part_totalCost" property="totalCost" z="5+dmz4TH07xn1yyx4NYdDR5dd/4="/>
+            <table:column id="c_be_wijverbouwen_model_Part_amountPayed" property="amountPayed" z="TCwAv7qsnlotUyn7X9DYIi/63nI="/>
+            <table:column id="c_be_wijverbouwen_model_Part_description" property="description" z="6PlWqIgax+aHfH9ZhCAqPCw5nyI="/>
+            <table:column id="c_be_wijverbouwen_model_Part_imageSource" property="imageSource" z="hsweQ96nRrWnYozF4t9Fpzu2O84="/>
+        </table:table>
+    </page:list>
+</div>

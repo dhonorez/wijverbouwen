@@ -1,0 +1,84 @@
+<div class="container container2"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+
+	<div class="hero-unit">
+      <h1 class="text-center">Wij verbouwen onze zolder!</h1>
+      <p class="text-center">(en u kan helpen)<br/>
+        <img src="images/hartje2.png" style="width:100px;height:100px;" alt=""/>
+      </p>      
+    </div>
+
+	 <div class="container-fluid">
+      <blockquote>
+      <p>Hallo en alvast bedankt voor uw bezoek aan deze website! Even een woordje uitleg: wij wonen inmiddels 3 jaar en half te Hoboken. Helaas zijn onze slaapkamers inmiddels bezet. We hebben ons huis uitgekozen omdat er op zolder mogelijkheid is om slaapkamers bij te bouwen. Dit project zouden we graag beginnen realiseren. Omdat dit een kostelijk project is, hebben we gekozen om de klassieke huwelijkslijst links te laten liggen, en in plaats daarvan mensen te laten 'deelnemen' aan dit project.
+      </p>
+      <small>Noke &amp; Dylan</small>
+      </blockquote>
+    </div>
+
+	<div id="carousel" class="carousel slide">
+		<div class="carousel-inner">
+			<div class="item active">
+				<img src="images/deel-1.png" alt="" />
+				<div class="carousel-caption">
+					<p>Fase 1: ruwbouw.</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/deel-2.png" alt="" />
+				<div class="carousel-caption">
+					<p>Fase 2: schrijnwerk.</p>
+				</div>
+			</div>
+			<div class="item">
+				<img src="images/deel-3.png" alt="" />
+				<div class="carousel-caption">
+					<p>Fase 3: afwerking.</p>
+				</div>
+			</div>
+		</div>
+		<a class="carousel-control left" href="#carousel" data-slide="prev">&#8249;</a>
+		<a class="carousel-control right" href="#carousel" data-slide="next">&#8250;</a>
+	</div>
+
+    <div class="span11">
+        <ol>
+            <li>Er moet heel wat werk opgeknapt worden. Allereerst moet de huidige ruimte herverdeeld worden. De
+                bestaande wand op zolder wordt verwijderd. Ook de toegang naar de zolderkamer wordt weggehaald. We
+                houden dan 1 grote ruimte over, met 1 verwarmingselement en één Velux raam.<br /> <br />
+            </li>
+            <li>Vervolgens wordt er een scheidingswand in het midden van de kamer geplaatst. Deze maakt van de
+                zolder 2 slaapkamers. Elke kamer krijgt een eigen deur. <br /> <br />
+            </li>
+            <li>De kamer links heeft reeds een raam en een verwarming, de kamer rechts heeft deze niet. Bedoeling
+                is dat we dit gelijktrekken.<br /> <br />
+            </li>
+            <li>Vervolgens worden de kamers voorzien van een heleboel stockageruimte. Tegen de scheidingswand komen
+                langs beide kanten ingemaakte kasten. De bestaande zijmuren worden ook gestript, hier worden lage kasten
+                met schuifdeuren van gemaakt. Ook in de gang komt bovenaan de trap een ingemaakte kast.<br /> <br />
+            </li>
+            <li>Als laatste hebben we nog heel wat onbenutte plaats in de traphal. Daar willen we eventueel nog een
+                platform bouwen voor het stockeren van kampeergerief, dozen etc.<br /> <br />
+            </li>
+        </ol>
+
+        <div>
+            <p>&#160;</p>
+        </div>
+    </div>
+
+    <!-- start carousel script -->
+	<script>
+		$(document).ready(function() {
+			$('.carousel').carousel();
+		});
+	</script>
+	
+	<script>$('#navIndex').addClass('active');</script>
+
+</div>

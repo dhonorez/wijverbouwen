@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:form="urn:jsptagdir:/WEB-INF/tags/form" xmlns:jsp="http://java.sun.com/JSP/Page" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <form:update id="fu_be_wijverbouwen_model_Part" modelAttribute="part" path="/parts" versionField="Version" z="fIhCM9pzbSdYUPqUVBOLjoPMVOA=">
+        <field:textarea field="partName" id="c_be_wijverbouwen_model_Part_partName" required="true" z="C4JltQDwRAVMbZ2R7DYSNPkYf2I="/>
+        <field:input field="totalCost" id="c_be_wijverbouwen_model_Part_totalCost" required="true" z="skqphNXbKmh4XaulJS2nb5ZzECU="/>
+        <field:input field="amountPayed" id="c_be_wijverbouwen_model_Part_amountPayed" z="UE82RdIuMxXkNsKSZssbmORvnsk="/>
+        <field:input field="description" id="c_be_wijverbouwen_model_Part_description" z="H/n+fV9HzaDtPDiUK3KYYyc+ZSQ="/>
+        <field:input field="imageSource" id="c_be_wijverbouwen_model_Part_imageSource" z="SCE4sF0okZJq/hbV23DKspi/NSo="/>
+    </form:update>
+</div>

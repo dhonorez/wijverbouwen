@@ -1,0 +1,70 @@
+<div class="container container2"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+    xmlns:fmt="http://java.sun.com/jsp/jstl/fmt"
+	xmlns:spring="http://www.springframework.org/tags"
+	xmlns:util="urn:jsptagdir:/WEB-INF/tags/util"
+	xmlns:jsp="http://java.sun.com/JSP/Page">
+	
+	<jsp:directive.page contentType="text/html;charset=UTF-8" />
+	<jsp:output omit-xml-declaration="yes" />
+
+	<div class="span11">
+		<h1>Beschikbare onderdelen:</h1>
+		
+		<c:forEach var="part" items="${parts}">
+		<div class="container-fluid well">
+			<div class="row-fluid">
+				<div class="span2">
+					<c:choose>
+					<c:when test="${part.imageSource == null}"><img src="http://placehold.it/150x150" alt="" /></c:when>
+					<c:otherwise><img src="${part.imageSource}" alt="" /></c:otherwise>
+					</c:choose>
+				</div>
+				<div class="span10">
+					<h2>${part.partName}</h2>
+					<!--<p>&#8364;${part.totalCost}</p>-->
+                    <p><fmt:formatNumber value="${part.totalCost}" type="currency" currencySymbol="€" maxFractionDigits="0" groupingUsed="false" /></p>
+                    <fmt:formatNumber var="perc" value="${part.amountPayed / part.totalCost}" maxFractionDigits="0" type="percent" />
+					<div class="progress progress-danger progress-striped active">
+						<div class="bar" style="width: ${perc};">&#160;</div>
+					</div>
+					<div>
+						<a class="btn btn-info" href="${pageContext.servletContext.contextPath}/reservation/new/${part.id}" data-toggle="modal">
+							<i class="icon-shopping-cart icon-white">&#160;</i>
+							<span>Doe een bijdrage!</span> 
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		</c:forEach>
+
+		<!-- Modal -->
+		<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog"
+			aria-labelledby="myModalLabel" aria-hidden="true">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-hidden="true">×</button>
+				<h3 id="myModalLabel">Instructies</h3>
+			</div>
+			<div class="modal-body">
+				<p>U wil een bijdrage doen? Geweldig!</p>
+				<p>Stort uw bedrag op rekeningnummer 750 - 557136 - 06, en
+					vermeld zeker de code 'ZOLDER', uw naam en het onderdeel waarvoor u
+					wil bijdragen.</p>
+				<p>Indien u bevestiging wil dat we uw bijdrage goed hebben
+					ontvangen, mag u ook een emailadres of telefoonnummer toevoegen.</p>
+				<p>
+					Tenslotte kan u ook een bevestigingsmailtje sturen naar <a
+						href="mailto:bijdrage@wijverbouwenonzezolder.com">bijdrage@wijverbouwenonzezolder.com'</a>
+				</p>
+			</div>
+			<div class="modal-footer">
+				<button class="btn btn-info" data-dismiss="modal" aria-hidden="true">Sluiten</button>
+			</div>
+		</div>
+
+	</div>
+
+	<script>$('#navShop').addClass('active');</script>
+</div>

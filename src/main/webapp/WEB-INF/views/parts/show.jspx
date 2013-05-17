@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<div xmlns:field="urn:jsptagdir:/WEB-INF/tags/form/fields" xmlns:jsp="http://java.sun.com/JSP/Page" xmlns:page="urn:jsptagdir:/WEB-INF/tags/form" version="2.0">
+    <jsp:directive.page contentType="text/html;charset=UTF-8"/>
+    <jsp:output omit-xml-declaration="yes"/>
+    <page:show id="ps_be_wijverbouwen_model_Part" object="${part}" path="/parts" z="8v02FFXF2u0wDrCEnDK+ar5znDQ=">
+        <field:display field="partName" id="s_be_wijverbouwen_model_Part_partName" object="${part}" z="8ePBNaHDxXK1EgOip2sxVY6EErA="/>
+        <field:display field="totalCost" id="s_be_wijverbouwen_model_Part_totalCost" object="${part}" z="PwCYai/i1DI7OlSxKLQ5n7Sq+II="/>
+        <field:display field="amountPayed" id="s_be_wijverbouwen_model_Part_amountPayed" object="${part}" z="rSldQ2lehCRSOy6rkPW18FNMCdw="/>
+        <field:display field="description" id="s_be_wijverbouwen_model_Part_description" object="${part}" z="Mk5A7byt2po7RGX+ZXVT/p3B360="/>
+        <field:display field="imageSource" id="s_be_wijverbouwen_model_Part_imageSource" object="${part}" z="eSVpkaQm87oept05SvXVB/eKdsM="/>
+    </page:show>
+</div>
