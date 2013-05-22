@@ -3,7 +3,7 @@
 
 package be.wijverbouwen.model;
 
-import be.wijverbouwen.model.PartDataOnDemand;
+import be.wijverbouwen.model.Part;
 import be.wijverbouwen.model.Reservation;
 import be.wijverbouwen.model.ReservationDataOnDemand;
 import java.security.SecureRandom;
@@ -13,7 +13,6 @@ import java.util.List;
 import java.util.Random;
 import javax.validation.ConstraintViolation;
 import javax.validation.ConstraintViolationException;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 privileged aspect ReservationDataOnDemand_Roo_DataOnDemand {
@@ -24,15 +23,13 @@ privileged aspect ReservationDataOnDemand_Roo_DataOnDemand {
     
     private List<Reservation> ReservationDataOnDemand.data;
     
-    @Autowired
-    private PartDataOnDemand ReservationDataOnDemand.partDataOnDemand;
-    
     public Reservation ReservationDataOnDemand.getNewTransientReservation(int index) {
         Reservation obj = new Reservation();
         setAmountPayed(obj, index);
         setAmountReserved(obj, index);
         setEmail(obj, index);
         setName(obj, index);
+        setPart(obj, index);
         setPayed(obj, index);
         setPhone(obj, index);
         return obj;
@@ -62,6 +59,11 @@ privileged aspect ReservationDataOnDemand_Roo_DataOnDemand {
             name = name.substring(0, 50);
         }
         obj.setName(name);
+    }
+    
+    public void ReservationDataOnDemand.setPart(Reservation obj, int index) {
+        Part part = null;
+        obj.setPart(part);
     }
     
     public void ReservationDataOnDemand.setPayed(Reservation obj, int index) {

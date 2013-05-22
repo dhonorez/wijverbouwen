@@ -1,1 +1,26 @@
 // Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-05-17 16:51:16
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-05-21 21:38:42
+jpa setup --database HYPERSONIC_IN_MEMORY --provider HIBERNATE 
+jpa setup --database MYSQL --provider HIBERNATE 
+perform tests
+perform tests
+perform tests
+perform clean
+perform tests
+test integration --entity ~.model.Part
+perform tests
+test mock
+perform tests
+focus --class ~.model.Guestbook
+test mock
+focus --class ~.model.Reservation 
+test mock
+perform tests
+test integration
+perform tests
+perform test
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-05-21 22:19:05
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-05-21 22:22:18
+perform test
+perform test
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-05-21 22:52:50
